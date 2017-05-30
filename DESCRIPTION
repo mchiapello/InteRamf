@@ -5,6 +5,11 @@ Authors@R: person("Marco", "Chiapello", email = "mc983@cam.ac.uk", role = c("aut
 Maintainer: Marco Chiapello <mc983@cam.ac.uk>
 Description: What the package does (one paragraph).
 Depends: R (>= 3.2.0)
+Imports: Ramf,
+			stats,
+			methods,
+			utils,
+			BiocStyle
 Suggests: testthat,
 			knitr (>= 1.1.0),
 			roxygen2,
