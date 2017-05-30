@@ -1,9 +1,17 @@
 Package: InteRamf
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Title: A friendly graphical user interface for Ramf package
+Version: 0.0.1
+Authors@R: person("Marco", "Chiapello", email = "mc983@cam.ac.uk", role = c("aut", "cre"))
+Maintainer: Marco Chiapello <mc983@cam.ac.uk>
 Description: What the package does (one paragraph).
-Depends: R (>= 3.4.0)
-License: What license is it under?
+Depends: R (>= 3.2.0)
+Suggests: testthat,
+			knitr (>= 1.1.0),
+			roxygen2,
+			rmarkdown
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+VignetteBuilder: knitr
+BugReports: https://github.com/mchiapello/InteRamf/issues
+RoxygenNote: 6.0.1

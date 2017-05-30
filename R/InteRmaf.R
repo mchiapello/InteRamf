@@ -5,9 +5,10 @@
 ##' @author Marco Chiapello
 ##' @example
 ##' InteRamf()
+##' @import methods utils stats Ramf shiny
 
 InteRamf <- function(){
-	open <- shiny::runApp(system.file("InteRamfApp", package = "InteRamf"),
+	open <- runApp(system.file("InteRamfApp", package = "InteRamf"),
 						  launch.browser = TRUE)
 	return(invisible(open))
 }
