@@ -1,9 +1,11 @@
 shinyUI(pageWithSidebar(
 
   # Application title
-  headerPanel("Miles Per Gallon"),
-
-  sidebarPanel(),
-
+  titlePanel("", windowTitle = "InteRamf"),
+  navbarPage(
+			 tabPanel(test,
+					  uiOutput("description")
+					 ),
+  navbarMenu("Data Processing"),
   mainPanel()
 ))
