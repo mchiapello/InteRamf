@@ -1,11 +1,15 @@
 shinyUI(
 		navbarPage(includeCSS("www/bootstrap.css"),
-		"InteRamf",
-        tabPanel("Plot",
+			tabPanel("InteRamf package",
 				includeMarkdown(file.path("server", "description.md"))),
-        tabPanel("Summary",
+			tabPanel("Data collection",
+				splitLayout(cellWidths = 500,
+							cellArgs = list(style = "padding: 6px"),
+				  includeMarkdown(file.path("server", "description2.md")),
+				  includeMarkdown(file.path("server", "description2.md"))
+				)),
+			tabPanel("Data input",
 				sidebarLayout(
-
 				# Sidebar with a slider input
 				sidebarPanel(
 				  sliderInput("obs",
@@ -14,13 +18,14 @@ shinyUI(
 							  max = 1000,
 							  value = 500)
 				),
-
+				fluidRow(
+						 column(6, DT::dataTableOutput("pdata")
+						)
 				# Show a plot of the generated distribution
-				  mainPanel(
-				    plotOutput("distPlot")
-				  )
+						 #                   mainPanel(
+						 #                     plotOutput("distPlot")
+						 #                   )
 				)
-			   ),
-        tabPanel("Table")
-        )
-)
+			)),
+			tabPanel("Table")
+))
