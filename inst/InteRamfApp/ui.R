@@ -10,22 +10,36 @@ shinyUI(
 				)),
 			tabPanel("Data input",
 				sidebarLayout(
-				# Sidebar with a slider input
+				# sidebar with a slider input
 				sidebarPanel(
-				  sliderInput("obs",
-							  "Number of observations:",
-							  min = 0,
-							  max = 1000,
-							  value = 500)
+							 #                   sliderinput("obs",
+							 #                               "number of observations:",
+							 #                               min = 0,
+							 #                               max = 1000,
+							 #                               value = 500)
+							 includeText(file.path("server", "del.txt"))
 				),
 				fluidRow(
-						 column(6, DT::dataTableOutput("pdata")
-						)
-				# Show a plot of the generated distribution
-						 #                   mainPanel(
-						 #                     plotOutput("distPlot")
-						 #                   )
+						 column(6, DT::dataTableOutput("pdata"))
 				)
-			)),
-			tabPanel("Table")
-))
+				)
+			),
+			tabPanel("Table output"),
+			tabPanel("Plots", 
+				sidebarLayout(
+				# sidebar with a slider input
+				sidebarPanel(
+							 #                   sliderinput("obs",
+							 #                               "number of observations:",
+							 #                               min = 0,
+							 #                               max = 1000,
+							 #                               value = 500)
+							 includeText(file.path("server", "del.txt"))
+				),
+				fluidRow(
+						 column(6, DT::dataTableOutput("pdata"))
+				)
+					 )
+			)
+		)
+)
