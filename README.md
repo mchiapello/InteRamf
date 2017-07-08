@@ -4,7 +4,7 @@
 # The **InteRamf** package [pre-release]
 
 ## Overview
-<img align = "right" src="inst/InteRamfApp/www/InteRamf.jpg" height="200">
+<img align = "right" src="inst/extdata/InteRamf.png" height="200">
 
 A package for arbuscular mycorrhyzal fungi colonization
 
